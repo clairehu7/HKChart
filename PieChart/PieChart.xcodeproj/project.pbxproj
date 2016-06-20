@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		770B5ACD1D177FA400D780F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B5ACC1D177FA400D780F2 /* main.m */; };
 		770B5AD01D177FA400D780F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B5ACF1D177FA400D780F2 /* AppDelegate.m */; };
-		770B5AD31D177FA400D780F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B5AD21D177FA400D780F2 /* ViewController.m */; };
 		770B5AD61D177FA400D780F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B5AD41D177FA400D780F2 /* Main.storyboard */; };
 		770B5AD81D177FA400D780F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770B5AD71D177FA400D780F2 /* Assets.xcassets */; };
 		770B5ADB1D177FA400D780F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770B5AD91D177FA400D780F2 /* LaunchScreen.storyboard */; };
 		770B5AE61D177FA500D780F2 /* PieChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B5AE51D177FA500D780F2 /* PieChartTests.m */; };
+		770B5AF21D1780E900D780F2 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B5AF11D1780E900D780F2 /* HomePageViewController.m */; };
+		770B5AF61D17815D00D780F2 /* HKPieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B5AF51D17815D00D780F2 /* HKPieChartView.m */; };
+		774E95251D17825F0007F929 /* ShowPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 774E95241D17825F0007F929 /* ShowPieChartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +33,6 @@
 		770B5ACC1D177FA400D780F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		770B5ACE1D177FA400D780F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		770B5ACF1D177FA400D780F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		770B5AD11D177FA400D780F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		770B5AD21D177FA400D780F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		770B5AD51D177FA400D780F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		770B5AD71D177FA400D780F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		770B5ADA1D177FA400D780F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +40,12 @@
 		770B5AE11D177FA500D780F2 /* PieChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PieChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		770B5AE51D177FA500D780F2 /* PieChartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieChartTests.m; sourceTree = "<group>"; };
 		770B5AE71D177FA500D780F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		770B5AF01D1780E900D780F2 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		770B5AF11D1780E900D780F2 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		770B5AF41D17815D00D780F2 /* HKPieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKPieChartView.h; sourceTree = "<group>"; };
+		770B5AF51D17815D00D780F2 /* HKPieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKPieChartView.m; sourceTree = "<group>"; };
+		774E95231D17825F0007F929 /* ShowPieChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPieChartViewController.h; sourceTree = "<group>"; };
+		774E95241D17825F0007F929 /* ShowPieChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPieChartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +87,13 @@
 		770B5ACA1D177FA400D780F2 /* PieChart */ = {
 			isa = PBXGroup;
 			children = (
+				770B5AF31D17814800D780F2 /* HKPieChartView */,
 				770B5ACE1D177FA400D780F2 /* AppDelegate.h */,
 				770B5ACF1D177FA400D780F2 /* AppDelegate.m */,
-				770B5AD11D177FA400D780F2 /* ViewController.h */,
-				770B5AD21D177FA400D780F2 /* ViewController.m */,
+				774E95231D17825F0007F929 /* ShowPieChartViewController.h */,
+				774E95241D17825F0007F929 /* ShowPieChartViewController.m */,
+				770B5AF01D1780E900D780F2 /* HomePageViewController.h */,
+				770B5AF11D1780E900D780F2 /* HomePageViewController.m */,
 				770B5AD41D177FA400D780F2 /* Main.storyboard */,
 				770B5AD71D177FA400D780F2 /* Assets.xcassets */,
 				770B5AD91D177FA400D780F2 /* LaunchScreen.storyboard */,
@@ -109,6 +118,15 @@
 				770B5AE71D177FA500D780F2 /* Info.plist */,
 			);
 			path = PieChartTests;
+			sourceTree = "<group>";
+		};
+		770B5AF31D17814800D780F2 /* HKPieChartView */ = {
+			isa = PBXGroup;
+			children = (
+				770B5AF41D17815D00D780F2 /* HKPieChartView.h */,
+				770B5AF51D17815D00D780F2 /* HKPieChartView.m */,
+			);
+			path = HKPieChartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770B5AD31D177FA400D780F2 /* ViewController.m in Sources */,
 				770B5AD01D177FA400D780F2 /* AppDelegate.m in Sources */,
+				770B5AF61D17815D00D780F2 /* HKPieChartView.m in Sources */,
 				770B5ACD1D177FA400D780F2 /* main.m in Sources */,
+				774E95251D17825F0007F929 /* ShowPieChartViewController.m in Sources */,
+				770B5AF21D1780E900D780F2 /* HomePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +422,7 @@
 				770B5AEC1D177FA500D780F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		770B5AED1D177FA500D780F2 /* Build configuration list for PBXNativeTarget "PieChartTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +431,7 @@
 				770B5AEF1D177FA500D780F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
