@@ -88,10 +88,16 @@
 			isa = PBXGroup;
 			children = (
 				770B5AF31D17814800D780F2 /* HKPieChartView */,
+				770B5ACE1D177FA400D780F2 /* AppDelegate.h */,
+				770B5ACF1D177FA400D780F2 /* AppDelegate.m */,
 				774E95231D17825F0007F929 /* ShowPieChartViewController.h */,
 				774E95241D17825F0007F929 /* ShowPieChartViewController.m */,
 				770B5AF01D1780E900D780F2 /* HomePageViewController.h */,
 				770B5AF11D1780E900D780F2 /* HomePageViewController.m */,
+				770B5AD41D177FA400D780F2 /* Main.storyboard */,
+				770B5AD71D177FA400D780F2 /* Assets.xcassets */,
+				770B5AD91D177FA400D780F2 /* LaunchScreen.storyboard */,
+				770B5ADC1D177FA400D780F2 /* Info.plist */,
 				770B5ACB1D177FA400D780F2 /* Supporting Files */,
 			);
 			path = PieChart;
@@ -100,12 +106,6 @@
 		770B5ACB1D177FA400D780F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				770B5AD41D177FA400D780F2 /* Main.storyboard */,
-				770B5AD71D177FA400D780F2 /* Assets.xcassets */,
-				770B5AD91D177FA400D780F2 /* LaunchScreen.storyboard */,
-				770B5ADC1D177FA400D780F2 /* Info.plist */,
-				770B5ACE1D177FA400D780F2 /* AppDelegate.h */,
-				770B5ACF1D177FA400D780F2 /* AppDelegate.m */,
 				770B5ACC1D177FA400D780F2 /* main.m */,
 			);
 			name = "Supporting Files";

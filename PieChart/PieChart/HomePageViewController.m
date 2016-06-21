@@ -6,7 +6,7 @@
 //  Copyright © 2016年 HKY. All rights reserved.
 //
 
-#import "ShowPieChartViewController.h"
+#import "HKPieChartView.h"
 
 #import "HomePageViewController.h"
 
