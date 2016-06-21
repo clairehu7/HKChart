@@ -6,18 +6,24 @@
 //  Copyright © 2016年 HKY. All rights reserved.
 //
 
+#import "HKPieChartView.h"
+
 #import "ShowPieChartViewController.h"
-#import "HomePageViewController.h"
 
 @interface ShowPieChartViewController ()
+
+@property (nonatomic, strong) HKPieChartView *pieChartView;
 
 @end
 
 @implementation ShowPieChartViewController
 
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self pieChartView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,4 +41,15 @@
 }
 */
 
+#pragma mark - Getters & Setters
+
+- (HKPieChartView *)pieChartView {
+    if (!_pieChartView) {
+        CGFloat width = 200;
+        _pieChartView = [[HKPieChartView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - width)/2, 100, width, width)];
+        _pieChartView.percent = 90;
+        [self.view addSubview:_pieChartView];
+    }
+    return _pieChartView;
+}
 @end
