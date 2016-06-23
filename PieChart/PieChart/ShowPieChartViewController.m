@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor colorWithRed:0.118 green:0.133 blue:0.153 alpha:1.000];
     [self pieChartView];
 }
 
@@ -45,9 +46,9 @@
 
 - (HKPieChartView *)pieChartView {
     if (!_pieChartView) {
-        CGFloat width = 200;
+        CGFloat width = 150;
         _pieChartView = [[HKPieChartView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - width)/2, 100, width, width)];
-        _pieChartView.percent = 90;
+        [_pieChartView updatePercent:90 animation:YES];
         [self.view addSubview:_pieChartView];
     }
     return _pieChartView;
