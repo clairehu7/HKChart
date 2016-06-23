@@ -10,6 +10,6 @@
 
 @interface HKPieChartView : UIView
 
-- (void)updatePercent:(CGFloat)percent animation:(BOOL)animationed;
+@property (nonatomic, assign) CGFloat percent; //饼状图显示的百分比，最大为100
 
 @end
