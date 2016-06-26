@@ -32,12 +32,17 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self experiment];
+        [self updateUI];
     }
     return self;
 }
 
-- (void)experiment {
+-(void)awakeFromNib {
+    [super awakeFromNib];
+    [self updateUI];
+}
+
+- (void)updateUI {
     self.trackColor = [UIColor blackColor];
     self.progressColor = [UIColor greenColor];
     self.animationDuration = 5;
@@ -56,7 +61,7 @@
     layer.frame = CGRectMake(layerX, layerX, layerWidth, layerWidth);
     layer.fillColor = [UIColor clearColor].CGColor;
     layer.strokeColor = color.CGColor;
-    layer.lineCap = kCALineCapSquare;
+    layer.lineCap = kCALineCapButt;
     layer.lineWidth = self.lineWidth;
     layer.path = self.path.CGPath;
 }
