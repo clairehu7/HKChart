@@ -88,46 +88,34 @@
         animation.duration = self.animationDuration * self.percent / 100;
         animation.removedOnCompletion = YES;
         animation.delegate = self;
-        
+        animation.timingFunction    = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+
         self.progressLayer.strokeEnd = self.percent / 100;
         [self.progressLayer addAnimation:animation forKey:@"strokeEndAnimation"];
-//        self.timer = [NSTimer scheduledTimerWithTimeInterval:1/60.f target:self selector:@selector(numberAnimation) userInfo:nil repeats:YES];
     }
 }
 
-#pragma mark - animation delegate
-- (void)animationDidStart:(CAAnimation *)anim
-{
+#pragma mark - CAAnimationDelegate
+
+- (void)animationDidStart:(CAAnimation *)anim {
     self.timer = [NSTimer timerWithTimeInterval:1/60.f target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
-{
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     if (flag) {
         [self invalidateTimer];
         self.progressLabel.text = [NSString stringWithFormat:@"%0.f%%", self.percent];
     }
 }
 
-- (void)timerAction
-{
+- (void)timerAction {
     id strokeEnd = [[_progressLayer presentationLayer] valueForKey:@"strokeEnd"];
     if (![strokeEnd isKindOfClass:[NSNumber class]]) {
         return;
     }
     CGFloat progress = [strokeEnd floatValue];
     self.progressLabel.text = [NSString stringWithFormat:@"%0.f%%",floorf(progress * 100)];
-}
-
-- (void)numberAnimation {
-    
-    self.sumSteps += 1;
-    
-    if (self.sumSteps >= self.animationDuration) {
-        [self invalidateTimer];
-        return;
-    }
 }
 
 - (void)invalidateTimer {
