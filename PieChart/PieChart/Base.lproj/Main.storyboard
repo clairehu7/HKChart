@@ -25,39 +25,49 @@
                                 </constraints>
                                 <state key="normal" title="Jump"/>
                                 <connections>
-                                    <segue destination="HHn-k2-h9n" kind="show" id="BCe-Ia-WUS"/>
+                                    <action selector="jumpTUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7aR-Hb-cfM"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-W8-qgi">
+                                <rect key="frame" x="241" y="208" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OPU-Gm-6Go"/>
+                                    <constraint firstAttribute="width" constant="114" id="eM6-cb-ujJ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="percentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="c5i-aF-Cub"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH5-PS-ohJ">
+                                <rect key="frame" x="243" y="163" width="114" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="REF-Io-KXc"/>
+                                    <constraint firstAttribute="width" constant="114" id="SpM-M6-qZF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Q3U-9A-ulT" firstAttribute="top" secondItem="KJb-W8-qgi" secondAttribute="bottom" constant="8" id="EiW-kv-3Q2"/>
                             <constraint firstItem="Q3U-9A-ulT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PFn-6D-1o8"/>
+                            <constraint firstItem="KJb-W8-qgi" firstAttribute="top" secondItem="wH5-PS-ohJ" secondAttribute="bottom" constant="18" id="Pup-U7-xeZ"/>
+                            <constraint firstItem="wH5-PS-ohJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PyF-xc-4g5"/>
+                            <constraint firstItem="KJb-W8-qgi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBe-uM-f9d"/>
                             <constraint firstItem="Q3U-9A-ulT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azr-ws-bS1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UdL-14-j0h"/>
+                    <connections>
+                        <outlet property="controlSlider" destination="KJb-W8-qgi" id="RjW-ln-uQB"/>
+                        <outlet property="percentLabel" destination="wH5-PS-ohJ" id="fDs-r4-Jwv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="327"/>
-        </scene>
-        <!--Show Pie Chart View Controller-->
-        <scene sceneID="yLo-OR-e0K">
-            <objects>
-                <viewController id="HHn-k2-h9n" customClass="ShowPieChartViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Nad-eI-cWn"/>
-                        <viewControllerLayoutGuide type="bottom" id="gw9-m8-WhR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gkb-6V-tHh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1M2-e9-QAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1514" y="327"/>
+            <point key="canvasLocation" x="736" y="327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8tY-QC-Mcm">

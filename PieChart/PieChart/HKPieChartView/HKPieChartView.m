@@ -45,7 +45,7 @@
 - (void)updateUI {
     self.trackColor = [UIColor blackColor];
     self.progressColor = [UIColor greenColor];
-    self.animationDuration = 5;
+    self.animationDuration = 3;
     self.pathWidth = self.bounds.size.width / 1.15;
     [self shadowImageView];
     [self trackLayer];

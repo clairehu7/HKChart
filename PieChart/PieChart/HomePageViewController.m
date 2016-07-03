@@ -12,6 +12,9 @@
 
 @interface HomePageViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *percentLabel;
+@property (weak, nonatomic) IBOutlet UISlider *controlSlider;
+
 @end
 
 @implementation HomePageViewController
@@ -19,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.percentLabel.text = [NSString stringWithFormat:@"%.0f%%",self.controlSlider.value];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,14 +30,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)jumpTUI:(UIButton *)sender {
+    ShowPieChartViewController *vc = [[ShowPieChartViewController alloc]init];
+    vc.percent = self.controlSlider.value;
+    [self.navigationController pushViewController:vc animated:YES];
 }
-*/
+
+
+- (IBAction)percentChanged:(UISlider *)sender {
+    self.percentLabel.text = [NSString stringWithFormat:@"%.0f%%",sender.value];
+}
 
 @end

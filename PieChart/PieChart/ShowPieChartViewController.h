@@ -10,4 +10,6 @@
 
 @interface ShowPieChartViewController : UIViewController
 
+@property (nonatomic, assign) CGFloat percent;
+
 @end

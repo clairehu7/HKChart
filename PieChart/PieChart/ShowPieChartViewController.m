@@ -47,8 +47,8 @@
 - (HKPieChartView *)pieChartView {
     if (!_pieChartView) {
         CGFloat width = 150;
-        _pieChartView = [[HKPieChartView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - width)/2, 100, width, width)];
-        [_pieChartView updatePercent:10 animation:YES];
+        _pieChartView = [[HKPieChartView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - width)/2, 150, width, width)];
+        [_pieChartView updatePercent:self.percent animation:YES];
         [self.view addSubview:_pieChartView];
     }
     return _pieChartView;
