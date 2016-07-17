@@ -24,6 +24,9 @@
 @property (nonatomic, assign) CGFloat pathWidth;
 @property (nonatomic, assign) CGFloat sumSteps;
 @property (nonatomic, strong) UILabel *progressLabel;
+
+@property (nonatomic, assign) BOOL panAnimationing;
+
 @end
 
 @implementation HKPieChartView
@@ -47,9 +50,11 @@
     self.progressColor = [UIColor greenColor];
     self.animationDuration = 3;
     self.pathWidth = self.bounds.size.width / 1.15;
+    
     [self shadowImageView];
     [self trackLayer];
     [self gradientLayer];
+    [self loadGesture];
 }
 
 #pragma mark - Load
@@ -64,6 +69,19 @@
     layer.lineCap = kCALineCapButt;
     layer.lineWidth = self.lineWidth;
     layer.path = self.path.CGPath;
+}
+
+- (void)loadGesture {
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(didPan:)];
+    [self addGestureRecognizer:pan];
+}
+
+#pragma mark - Gesture Action
+
+- (void)didPan:(UIPanGestureRecognizer *)pan {
+    if (!self.panAnimationing) {
+        
+    }
 }
 
 #pragma mark - Animation
