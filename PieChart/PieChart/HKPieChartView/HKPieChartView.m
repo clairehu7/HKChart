@@ -8,7 +8,7 @@
 
 #import "HKPieChartView.h"
 
-@interface HKPieChartView()
+@interface HKPieChartView()<CAAnimationDelegate>
 
 @property (nonatomic, strong) CAShapeLayer *trackLayer;
 @property (nonatomic, strong) CAShapeLayer *progressLayer;
