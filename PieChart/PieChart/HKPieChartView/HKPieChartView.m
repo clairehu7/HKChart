@@ -57,6 +57,15 @@
     [self loadGesture];
 }
 
+- (void)dealloc {
+    [self invalidateTimer];
+}
+
+- (void)removeFromSuperview {
+    [super removeFromSuperview];
+    [self invalidateTimer];
+}
+
 #pragma mark - Load
 
 - (void)loadLayer:(CAShapeLayer *)layer WithColor:(UIColor *)color {
@@ -135,6 +144,7 @@
     CGFloat progress = [strokeEnd floatValue];
     self.progressLabel.text = [NSString stringWithFormat:@"%0.f%%",floorf(progress * 100)];
 }
+
 
 - (void)invalidateTimer {
     if (!self.timer) {
